@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Capa Usuario", "Capa Usuario", "{8FBC1D9F-6954-44C7-BE85-4BEF3D6A29B7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repositorio", "Repositorio", "{DB8A0931-6D6F-4453-9777-E9751C19179E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Negocio", "Negocio", "{4EDB2618-369B-410E-821F-EA3AD1617EE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "710912_LOKO.Web", "710912_LOKO.Web\710912_LOKO.Web.csproj", "{C1FF8C36-9F30-4BCB-9DD2-25D30C5FDCDB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "710912_LOKO.BussinessEntities", "710912_LOKO.BussinessEntities\710912_LOKO.BussinessEntities.csproj", "{171ECC32-0E44-497B-931D-011C260E2664}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "710912_LOKO.Service", "710912_LOKO.Service\710912_LOKO.Service.csproj", "{93584924-64BC-45DD-8723-E1B101E862B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "710912_LOKO.Repository", "710912_LOKO.Repository\710912_LOKO.Repository.csproj", "{DB6D4764-A482-4D44-8611-182076103EEB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1FF8C36-9F30-4BCB-9DD2-25D30C5FDCDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1FF8C36-9F30-4BCB-9DD2-25D30C5FDCDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1FF8C36-9F30-4BCB-9DD2-25D30C5FDCDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1FF8C36-9F30-4BCB-9DD2-25D30C5FDCDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{171ECC32-0E44-497B-931D-011C260E2664}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{171ECC32-0E44-497B-931D-011C260E2664}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{171ECC32-0E44-497B-931D-011C260E2664}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{171ECC32-0E44-497B-931D-011C260E2664}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93584924-64BC-45DD-8723-E1B101E862B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93584924-64BC-45DD-8723-E1B101E862B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93584924-64BC-45DD-8723-E1B101E862B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93584924-64BC-45DD-8723-E1B101E862B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB6D4764-A482-4D44-8611-182076103EEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB6D4764-A482-4D44-8611-182076103EEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB6D4764-A482-4D44-8611-182076103EEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB6D4764-A482-4D44-8611-182076103EEB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C1FF8C36-9F30-4BCB-9DD2-25D30C5FDCDB} = {8FBC1D9F-6954-44C7-BE85-4BEF3D6A29B7}
+		{171ECC32-0E44-497B-931D-011C260E2664} = {4EDB2618-369B-410E-821F-EA3AD1617EE5}
+		{93584924-64BC-45DD-8723-E1B101E862B6} = {4EDB2618-369B-410E-821F-EA3AD1617EE5}
+		{DB6D4764-A482-4D44-8611-182076103EEB} = {DB8A0931-6D6F-4453-9777-E9751C19179E}
+	EndGlobalSection
+EndGlobal

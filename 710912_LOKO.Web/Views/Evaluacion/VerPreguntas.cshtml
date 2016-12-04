@@ -1,0 +1,35 @@
+﻿@model _710912_LOKO.Web.Models.VMEvaluacion
+
+@{
+    ViewBag.Title = Model.evDescr;
+}
+
+<h2>@ViewBag.Title</h2>
+
+<h3> @Model.evFecha</h3>
+
+@Html.ActionLink("Agregar Pregunta", "AgregarPregunta")
+<div>
+    <hr />
+
+    @for (int i = 0; i < Model.Preguntas.Count(); i++)
+    {
+        <b>
+            @Html.DisplayFor(modelItem => Model.Preguntas[i].preText)
+        </b>
+        for (int j = 0; j < Model.Preguntas[i].opciones.Count(); j++)
+        {
+            //@Html.Display(Model.Preguntas[i].opciones[j].ToString())
+            <br /> @Model.Preguntas[i].opciones[j]
+        }<br /><br />
+    }
+
+    @*@using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }*@
+</div>
