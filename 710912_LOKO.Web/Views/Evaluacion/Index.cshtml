@@ -28,7 +28,10 @@
             @Html.DisplayFor(modelItem => item.Fecha)
         </td>
         <td>
-            @Html.ActionLink("Ver Preguntas", "VerPreguntas",new { evaluacionId = item.Id})
+            @Html.ActionLink("Ver Preguntas (usando Joins)", "VerPreguntasJOINS", new { evaluacionId = item.Id })
+        </td>
+        <td>
+            @Html.ActionLink("Ver Preguntas (usando VM)", "VerPreguntasVM", new { evaluacionId = item.Id})
         </td>
     </tr>
 }

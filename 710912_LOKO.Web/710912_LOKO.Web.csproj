@@ -313,8 +313,8 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Evaluacion\Index.cshtml" />
-    <Content Include="Views\Evaluacion\VerPreguntas2.cshtml" />
-    <Content Include="Views\Evaluacion\VerPreguntas.cshtml" />
+    <Content Include="Views\Evaluacion\VerPreguntasJOINS.cshtml" />
+    <Content Include="Views\Evaluacion\VerPreguntasVM.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

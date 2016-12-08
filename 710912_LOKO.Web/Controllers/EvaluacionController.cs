@@ -45,7 +45,36 @@ namespace _710912_LOKO.Web.Controllers
             return View();
         }
 
-        public ActionResult VerPreguntas(int evaluacionId)
+        //más facil, usando joins
+        public ActionResult VerPreguntasJOINS(int evaluacionId)
+        {
+            var evaluacion =
+                from e in _evaluaciones.GetAll()
+                join p in _preguntas.GetAll() on e.Id equals p.EvaluacionId
+                    //falta validar cuando no hay preguntas
+                    //into ep
+                    //from pregunta in ep.DefaultIfEmpty()
+                join o in _opciones.GetAll() on p.Id equals o.PreguntaId
+                    //validado cuando no hay opciones
+                    into po
+                    from opc in po.DefaultIfEmpty()
+                where e.Id == evaluacionId
+                select e;
+
+            //var loj = (from prsn in db.People
+            //           join co in db.Companies on prsn.Person_ID equals co.Person_ID 
+            //            into comps
+            //            from y in comps.DefaultIfEmpty()
+            //           join prod in db.Products on prsn.Person_ID equals prod.Person_ID
+            //            into prods
+            //            from x in prods.DefaultIfEmpty()
+            //           select new { Person = prsn.NAME, Company = y.NAME, Product = x.NAME })
+
+            return View(evaluacion.First());
+        }
+
+        //usando ViewModel
+        public ActionResult VerPreguntasVM(int evaluacionId)
         {
             //vm para representar los datos
             var evaluacionVM = new VMEvaluacion();
@@ -90,14 +119,6 @@ namespace _710912_LOKO.Web.Controllers
             }
             return View(evaluacionVM);
         }
-
-        //intento infructuoso
-        //public ActionResult VerPreguntas2(int evaluacionId)
-        //{
-        //    var preguntas=_preguntas.Find(x => x.EvaluacionId == evaluacionId);
-        //    ViewBag.Evaluacion = _evaluaciones.GetById(evaluacionId);
-        //    return View(preguntas);
-        //}
 
 
         //public ActionResult AgregarPregunta(int evaluacionId, VMPregunta preguntaVM)

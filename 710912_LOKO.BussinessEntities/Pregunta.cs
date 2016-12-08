@@ -23,5 +23,7 @@ namespace _710912_LOKO.BussinessEntities
 
         [StringLength(100)]
         public string OpcionMarcada { get; set; }
+
+        public virtual List<Opcion> Opciones { get; set; }
     }
 }

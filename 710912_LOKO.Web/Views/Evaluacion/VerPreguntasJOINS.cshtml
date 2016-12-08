@@ -1,0 +1,25 @@
+﻿@model _710912_LOKO.BussinessEntities.Evaluacion
+@{
+    ViewBag.Title = Model.Descripcion;
+}
+
+<h2>@ViewBag.Title</h2>
+<h3>@Model.Fecha</h3>
+
+<p>
+    @Html.ActionLink("Agregar Pregunta", "AgregarPregunta")
+</p>
+
+<hr />
+@foreach (var pregunta in Model.Preguntas)
+{
+    <b>@pregunta.Texto</b>
+    <br />
+
+    foreach (var opcion in pregunta.Opciones)
+    {
+        @opcion.Texto
+        <br />
+    }
+    <br />
+}

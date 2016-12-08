@@ -19,5 +19,7 @@ namespace _710912_LOKO.BussinessEntities
         [Required]
         [DataType(DataType.Date)]
         public DateTime Fecha { get; set; }
+
+        public virtual List<Pregunta> Preguntas { get; set; }
     }
 }
