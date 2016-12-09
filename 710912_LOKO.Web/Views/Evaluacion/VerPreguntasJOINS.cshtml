@@ -7,7 +7,7 @@
 <h3>@Model.Fecha</h3>
 
 <p>
-    @Html.ActionLink("Agregar Pregunta", "AgregarPregunta")
+    @Html.ActionLink("Agregar Pregunta", "AgregarPregunta", new { evaluacionId=Model.Id})
 </p>
 
 <hr />

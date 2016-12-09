@@ -315,6 +315,7 @@
     <Content Include="Views\Evaluacion\Index.cshtml" />
     <Content Include="Views\Evaluacion\VerPreguntasJOINS.cshtml" />
     <Content Include="Views\Evaluacion\VerPreguntasVM.cshtml" />
+    <Content Include="Views\Evaluacion\AgregarPregunta.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

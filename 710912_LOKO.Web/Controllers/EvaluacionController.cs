@@ -45,6 +45,26 @@ namespace _710912_LOKO.Web.Controllers
             return View();
         }
 
+        public ActionResult AgregarPregunta(int evaluacionId)
+        {
+            ViewBag.Evaluacion = _evaluaciones.GetById(evaluacionId);
+
+            var model = new Pregunta();
+            model.EvaluacionId = evaluacionId;
+            model.Opciones = new List<Opcion>();
+            return View();
+        }
+        [HttpPost]
+        public ActionResult AgregarPregunta(Pregunta model)
+        {
+            if (ModelState.IsValid)
+            {
+                _preguntas.Add(model);
+                return RedirectToAction("VerPreguntasJOINS",new { evaluacionId = model.EvaluacionId });
+            }
+            return View(model);
+        }
+
         //más facil, usando joins
         public ActionResult VerPreguntasJOINS(int evaluacionId)
         {
@@ -121,19 +141,7 @@ namespace _710912_LOKO.Web.Controllers
         }
 
 
-        //public ActionResult AgregarPregunta(int evaluacionId, VMPregunta preguntaVM)
-        //{
-        //    var model = new Pregunta();
-        //    model.EvaluacionId = evaluacionId;
-        //    foreach(var item in preguntaVM.opciones)
-        //    {
-        //        var opc = new Opcion();
-        //        opc.PreguntaId=pregu
-        //        _opciones.Add
-        //    }
 
-
-        //}
 
         //// POST: Evaluacion/Create
         //[HttpPost]
