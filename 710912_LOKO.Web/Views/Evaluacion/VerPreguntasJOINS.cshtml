@@ -14,6 +14,7 @@
 @foreach (var pregunta in Model.Preguntas)
 {
     <b>@pregunta.Texto</b>
+    @Html.ActionLink("Editar Pregunta", "EditarPregunta", new { preguntaId = Model.Id })
     <br />
 
     foreach (var opcion in pregunta.Opciones)

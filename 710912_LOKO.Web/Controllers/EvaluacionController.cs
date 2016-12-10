@@ -65,6 +65,30 @@ namespace _710912_LOKO.Web.Controllers
             return View(model);
         }
 
+        public ActionResult EditarPregunta(int preguntaId)
+        {
+            var model = _preguntas.GetById(preguntaId);
+            //var model = new Pregunta();
+            //model.EvaluacionId = evaluacionId;
+            //model.Opciones = new List<Opcion>();
+            return View(model);
+        }
+        [HttpPost]
+        public ActionResult EditarPregunta(Pregunta model)
+        {
+            if (ModelState.IsValid)
+            {
+                foreach(var opc in model.Opciones)
+                {
+                    opc.PreguntaId = model.Id;
+                    _opciones.Edit(opc);
+                }
+                _preguntas.Edit(model);
+                return RedirectToAction("VerPreguntasJOINS", new { evaluacionId = model.EvaluacionId });
+            }
+            return View(model);
+        }
+
         //más facil, usando joins
         public ActionResult VerPreguntasJOINS(int evaluacionId)
         {
